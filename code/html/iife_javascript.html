@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript w pliku HTML</title>
+  </head>
+  <body>
+    <p>1 + 2 = <span id="wynik"> </span></p>
+    <script>
+      void function() {
+        window.modul = window.modul || {}
+        window.modul.suma = suma;
+
+        function suma(element, a, b) {
+          element.innerText = a + b;
+        }
+      }()
+
+      modul.suma(document.getElementById("wynik"), 1, 2);
+    </script>
+  </body>
+</html>
